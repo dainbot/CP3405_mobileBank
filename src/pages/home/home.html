@@ -1,17 +1,24 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Mobile Bank</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
+<ion-content padding class="home">
+  <h2>Welcome to Mobile Bank!</h2>
   <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
+    Enjoy the faster and more convenient way to bank on the go.
   </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <ion-grid>
+    <ion-row class="item">
+      <ion-col>
+        <ion-list>
+          <button ion-button (click)="openTransferPage()"><strong>Transfer</strong></button>
+          <button ion-button><strong>Account Information</strong></button>
+          <button ion-button><strong>History</strong></button>
+          <button ion-button><strong>Settings</strong></button>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
