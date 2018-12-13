@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { TransferPage } from '../transfer/transfer';
-
+import { SettingsPage } from '../settings/settings';
 
 @Component({
   selector: 'page-home',
@@ -15,6 +15,9 @@ export class HomePage {
 
   openTransferPage(){
     this.navCtrl.push(TransferPage)
+  }
+  openSettingsPage(){
+    this.navCtrl.push(SettingsPage)
   }
 
 }
