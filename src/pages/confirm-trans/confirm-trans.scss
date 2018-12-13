@@ -1,0 +1,25 @@
+page-confirm-trans {
+
+}
+
+.confirmMsg{
+  background-color: color($colors, primary);
+  height: 200px;
+  color: color($colors, light);
+  padding-left: 30px;
+  padding-top: 75px;
+}
+
+.detailbox{
+  background-color: color($colors, secondary);
+  height: 230px;
+  color: color($colors, dark);
+  font-size: 20px;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.button1{
+  align-self: center;
+}
