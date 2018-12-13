@@ -12,6 +12,7 @@ import { SettingsPage } from '../pages/settings/settings';
 import { TransactionPage } from '../pages/transaction/transaction';
 import { ConfirmTransPage } from '../pages/confirm-trans/confirm-trans';
 
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -25,7 +26,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TransferPage,
     SettingsPage,
     TransactionPage,
-    ConfirmTransPage
+    ConfirmTransPage,
   ],
   imports: [
     BrowserModule,
@@ -41,7 +42,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TransferPage,
     SettingsPage,
     TransactionPage,
-    ConfirmTransPage
+    ConfirmTransPage,
   ],
   providers: [
     StatusBar,
