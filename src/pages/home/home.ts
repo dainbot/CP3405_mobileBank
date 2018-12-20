@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { TransferPage } from '../transfer/transfer';
+
+import { TransHistoryPage } from '../trans-history/trans-history';
+
+
 import { SettingsPage } from '../settings/settings';
 import { CreateAccountPage } from '../create-account/create-account';
 import { AccountCreationPage } from '../account-creation/account-creation';
+
 
 @Component({
   selector: 'page-home',
@@ -18,6 +23,13 @@ export class HomePage {
   openTransferPage(){
     this.navCtrl.push(TransferPage)
   }
+
+
+  openTransHistoryPage(){
+    this.navCtrl.push(TransHistoryPage)
+  }
+
+
   openSettingsPage(){
     this.navCtrl.push(SettingsPage)
   }
@@ -27,4 +39,5 @@ export class HomePage {
   openAccountCreationPage(){
     this.navCtrl.push(AccountCreationPage)
   }
+
 }
