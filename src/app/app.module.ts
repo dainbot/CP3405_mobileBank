@@ -11,15 +11,17 @@ import { TransferPage } from '../pages/transfer/transfer';
 import { SettingsPage } from '../pages/settings/settings';
 import { TransactionPage } from '../pages/transaction/transaction';
 import { ConfirmTransPage } from '../pages/confirm-trans/confirm-trans';
-
 import { TransHistoryPage } from '../pages/trans-history/trans-history';
-
 import { CreateAccountPage} from '../pages/create-account/create-account';
 import { AccountCreationPage } from '../pages/account-creation/account-creation';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { AngularFireModule } from 'angularfire2';
+import { FIREBASE_CONFIG } from "./app.firebase.config";
+import { AngularFireAuthModule } from "angularfire2/auth";
+import { AngularFireDatabaseModule } from "angularfire2/database";
 
 @NgModule({
   declarations: [
@@ -32,16 +34,17 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SettingsPage,
     TransactionPage,
     ConfirmTransPage,
-
     TransHistoryPage,
-
     CreateAccountPage,
     AccountCreationPage,
 
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(FIREBASE_CONFIG),
+    AngularFireAuthModule,
+    AngularFireDatabaseModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -54,9 +57,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SettingsPage,
     TransactionPage,
     ConfirmTransPage,
-
     TransHistoryPage,
-
     CreateAccountPage,
     AccountCreationPage,
 

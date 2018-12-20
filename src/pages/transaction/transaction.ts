@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ConfirmTransPage } from "../confirm-trans/confirm-trans";
+import { amount } from "../../models/amount";
+import { AngularFireDatabase } from 'angularfire2/database';
 
 /**
  * Generated class for the TransactionPage page.
@@ -16,7 +18,10 @@ import { ConfirmTransPage } from "../confirm-trans/confirm-trans";
 })
 export class TransactionPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  amount = {} as amount;
+
+  constructor(private afDatabase: AngularFireDatabase,
+              public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
@@ -24,11 +29,9 @@ export class TransactionPage {
   }
 
   openConfirmTransPage(){
-    this.navCtrl.push(ConfirmTransPage)
+    this.afDatabase.list('amount').push(this.amount)
+      .then(() => this.navCtrl.push(ConfirmTransPage))
   }
 
 }
 
-/*
- We will add  more code
- */

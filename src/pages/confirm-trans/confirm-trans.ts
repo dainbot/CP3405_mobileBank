@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TransferPage } from '../transfer/transfer'
+// @ts-ignore
+import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
+import { amount } from './../../models/amount';
 
 /**
  * Generated class for the ConfirmTransPage page.
@@ -16,11 +19,14 @@ import { TransferPage } from '../transfer/transfer'
 })
 export class ConfirmTransPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  amountData: FirebaseObjectObservable<amount>
+
+  constructor(private afDatabase: AngularFireDatabase,
+              public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ConfirmTransPage');
+  ionViewWillLoad() {
+    this.amountData = this.afDatabase.object('amount')
   }
 
   openTransferPage(){
