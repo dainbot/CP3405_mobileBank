@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { TransferPage } from '../transfer/transfer';
 import { SettingsPage } from '../settings/settings';
 import { CreateAccountPage } from '../create-account/create-account';
+import { AccountCreationPage } from '../account-creation/account-creation';
 
 @Component({
   selector: 'page-home',
@@ -22,5 +23,8 @@ export class HomePage {
   }
   openCreateAccountPage(){
     this.navCtrl.push(CreateAccountPage)
+  }
+  openAccountCreationPage(){
+    this.navCtrl.push(AccountCreationPage)
   }
 }

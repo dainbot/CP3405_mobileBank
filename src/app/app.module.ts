@@ -12,6 +12,7 @@ import { SettingsPage } from '../pages/settings/settings';
 import { TransactionPage } from '../pages/transaction/transaction';
 import { ConfirmTransPage } from '../pages/confirm-trans/confirm-trans';
 import { CreateAccountPage} from '../pages/create-account/create-account';
+import { AccountCreationPage } from '../pages/account-creation/account-creation';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -27,7 +28,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SettingsPage,
     TransactionPage,
     ConfirmTransPage,
-    CreateAccountPage
+    CreateAccountPage,
+    AccountCreationPage,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SettingsPage,
     TransactionPage,
     ConfirmTransPage,
-    CreateAccountPage
+    CreateAccountPage,
+    AccountCreationPage,
   ],
   providers: [
     StatusBar,
