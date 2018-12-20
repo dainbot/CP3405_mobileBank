@@ -11,9 +11,27 @@
 <ion-header>
   <ion-navbar no-border-bottom>
     <ion-title>
-      Segments
+      Account History
     </ion-title>
   </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides pager class="slide">
+
+    <ion-slide style="background-color: green">
+      <h2>Credit Card 1</h2>
+    </ion-slide>
+
+    <ion-slide style="background-color: blue">
+      <h2>Credit card 2</h2>
+    </ion-slide>
+
+    <ion-slide style="background-color: red">
+      <h2>Credit card 3</h2>
+    </ion-slide>
+
+  </ion-slides>
 
   <ion-toolbar no-border-top>
     <ion-segment [(ngModel)]="pet">
@@ -28,9 +46,6 @@
       </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
-</ion-header>
-
-<ion-content>
   <div [ngSwitch]="pet">
     <ion-list *ngSwitchCase="'puppies'">
       <ion-item>
