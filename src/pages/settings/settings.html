@@ -12,19 +12,49 @@
 
 </ion-header>
 
-<ion-content padding>
-  <ion-grid>
-    <ion-row class="item">
-      <ion-col>
-        <ion-list>
-          <button ion-button>Languages</button>
-          <button ion-button>Voice Instruction Guide</button>
-          <button ion-button>Font Size</button>
-          <button ion-button>Notification</button>
-          <button ion-button>Feedback</button>
-        </ion-list>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+<ion-content padding class="item">
+  <ion-list-header class="list-header">
+    General
+  </ion-list-header>
+
+  <ion-item>
+    <ion-icon name='planet' item-start></ion-icon>
+    <ion-label class="text">Language</ion-label>
+    <ion-select [(ngModel)]="language" item-end>
+      <ion-option value="Chinese">Chinese</ion-option>
+      <ion-option value="English">English</ion-option>
+      <ion-option value="Japanese">Japanese</ion-option>
+      <ion-option value="Korean">Korean</ion-option>
+    </ion-select>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-icon name="videocam" item-start></ion-icon>
+    <ion-label class="text">
+    Voice Instruction Guide
+    </ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon name="brush" item-start></ion-icon>
+    <ion-range min="-100" step="10" snaps="true" [(ngModel)]="text" item-end>
+      <ion-label range-left class="small-text">A</ion-label>
+      <ion-label range-right>A</ion-label>
+    </ion-range>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon name='notifications' item-start></ion-icon>
+    <ion-label class="text">
+      Notification
+    </ion-label>
+    <ion-toggle checked="false" item-end></ion-toggle>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon name="chatbubbles" item-start></ion-icon>
+    <ion-label class="text" (click)="openFeedbackPage()">Feedback</ion-label>
+  </ion-item>
 
 </ion-content>

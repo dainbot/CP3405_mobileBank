@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { FeedbackPage} from "../feedback/feedback";
 
 /**
- * Generated class for the SettingsPage page.
+ * Generated class for the FeedbackPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,18 +10,16 @@ import { FeedbackPage} from "../feedback/feedback";
 
 @IonicPage()
 @Component({
-  selector: 'page-settings',
-  templateUrl: 'settings.html',
+  selector: 'page-feedback',
+  templateUrl: 'feedback.html',
 })
-export class SettingsPage {
+export class FeedbackPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SettingsPage');
+    console.log('ionViewDidLoad FeedbackPage');
   }
-openFeedbackPage(){
-  this.navCtrl.push(FeedbackPage)
-}
+
 }
