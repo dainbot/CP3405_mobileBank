@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {ConfirmTransPage} from "../confirm-trans/confirm-trans";
-import {HomePage} from "../home/home";
-import {ConfirmCreationPage} from "../confirm-creation/confirm-creation";
+import { HomePage } from "../home/home";
+import { ConfirmCreationPage } from "../confirm-creation/confirm-creation";
+import { Accountprofile } from "../../models/accountprofile";
+import { AngularFireDatabase } from 'angularfire2/database';
 
 /**
  * Generated class for the CreateAccountPage page.
@@ -18,15 +19,21 @@ import {ConfirmCreationPage} from "../confirm-creation/confirm-creation";
 })
 export class CreateAccountPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  accountprofile = {} as Accountprofile;
+
+  constructor(private afDatabase: AngularFireDatabase,
+    public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CreateAccountPage');
   }
+
   openConfirmCreationPage(){
-    this.navCtrl.push(ConfirmCreationPage)
+      this.afDatabase.list('accountprofile').push(this.accountprofile)
+        .then(() => this.navCtrl.push(ConfirmCreationPage))
   }
+
   openHomePage(){
     this.navCtrl.push(HomePage)
   }

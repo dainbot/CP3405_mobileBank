@@ -15,19 +15,19 @@
 <ion-content padding>
   <ion-row>
     <ion-item class="firstName">
-      <ion-input type="text" placeholder="First Name"></ion-input>
+      <ion-input type="text" placeholder="First Name" [(ngModel)]="accountprofile.firstname"></ion-input>
     </ion-item>
     <ion-item class="lastName">
-      <ion-input type="text" placeholder="Last Name"></ion-input>
+      <ion-input type="text" placeholder="Last Name" [(ngModel)]="accountprofile.lastname"></ion-input>
     </ion-item>
     <ion-item class="finNumber">
-      <ion-input type="text" placeholder="Fin Number"></ion-input>
+      <ion-input type="text" placeholder="Fin Number" [(ngModel)]="accountprofile.fin_num"></ion-input>
     </ion-item>
     <ion-item class="phone">
-      <ion-input type="text" placeholder="Phone Number"></ion-input>
+      <ion-input type="text" placeholder="Phone Number" [(ngModel)]="accountprofile.phone_num"></ion-input>
     </ion-item>
     <ion-item class="address">
-      <ion-input type="text" placeholder="Address"></ion-input>
+      <ion-input type="text" placeholder="Address" [(ngModel)]="accountprofile.address"></ion-input>
     </ion-item>
       <ion-item>
         <ion-label class="occupation">Occupation</ion-label>
