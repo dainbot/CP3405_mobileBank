@@ -14,7 +14,7 @@ import { ConfirmTransPage } from '../pages/confirm-trans/confirm-trans';
 import { TransHistoryPage } from '../pages/trans-history/trans-history';
 import { CreateAccountPage} from '../pages/create-account/create-account';
 import { AccountCreationPage } from '../pages/account-creation/account-creation';
-
+import { ConfirmCreationPage } from '../pages/confirm-creation/confirm-creation';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -37,6 +37,7 @@ import { AngularFireDatabaseModule } from "angularfire2/database";
     TransHistoryPage,
     CreateAccountPage,
     AccountCreationPage,
+    ConfirmCreationPage,
 
   ],
   imports: [
@@ -60,7 +61,7 @@ import { AngularFireDatabaseModule } from "angularfire2/database";
     TransHistoryPage,
     CreateAccountPage,
     AccountCreationPage,
-
+    ConfirmCreationPage,
   ],
   providers: [
     StatusBar,
