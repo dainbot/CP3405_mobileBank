@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {ConfirmTransPage} from "../confirm-trans/confirm-trans";
 import {HomePage} from "../home/home";
+import {ConfirmCreationPage} from "../confirm-creation/confirm-creation";
 
 /**
  * Generated class for the CreateAccountPage page.
@@ -23,8 +24,8 @@ export class CreateAccountPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad CreateAccountPage');
   }
-  openConfirmTransPage(){
-    this.navCtrl.push(ConfirmTransPage)
+  openConfirmCreationPage(){
+    this.navCtrl.push(ConfirmCreationPage)
   }
   openHomePage(){
     this.navCtrl.push(HomePage)
