@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ConfirmFeedbackPage} from "../confirm-feedback/confirm-feedback";
+import { FeedbackPage} from "../feedback/feedback";
 
 /**
- * Generated class for the FeedbackPage page.
+ * Generated class for the ConfirmFeedbackPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,18 +11,18 @@ import { ConfirmFeedbackPage} from "../confirm-feedback/confirm-feedback";
 
 @IonicPage()
 @Component({
-  selector: 'page-feedback',
-  templateUrl: 'feedback.html',
+  selector: 'page-confirm-feedback',
+  templateUrl: 'confirm-feedback.html',
 })
-export class FeedbackPage {
+export class ConfirmFeedbackPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad FeedbackPage');
+    console.log('ionViewDidLoad ConfirmFeedbackPage');
   }
-  openConfirmFeedbackPage(){
-    this.navCtrl.push(ConfirmFeedbackPage)
+  openFeedbackPage(){
+    this.navCtrl.push(FeedbackPage)
   }
 }
