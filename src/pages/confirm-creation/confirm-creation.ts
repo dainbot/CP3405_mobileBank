@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AccountCreationPage} from "../account-creation/account-creation";
 import { AngularFireDatabase } from 'angularfire2/database';
-import { Accountprofile} from "../../models/accountprofile";
 
 /**
  * Generated class for the ConfirmCreationPage page.

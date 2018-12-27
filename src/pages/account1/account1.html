@@ -18,12 +18,23 @@
       </ion-list>
     </ion-row>
       <ion-row style="margin-top: 15%">
+        <ion-item class="lastName" *ngFor="let item of items">
+          <ion-label color="primary" stacked><b>Last Name: </b></ion-label>
+          <ion-label>{{item.lastname}}</ion-label>
+        </ion-item>
+
+        <ion-item class="firstName" *ngFor="let item of items">
+          <ion-label color="primary" stacked><b>First Name: </b></ion-label>
+          <ion-label>{{item.firstname}}</ion-label>
+        </ion-item>
+
         <ion-item class="accNum">
-          <ion-label color="primary" stacked>Account Number:</ion-label>
+          <ion-label color="primary" stacked><b>Account Number:</b></ion-label>
           <ion-label>123456778</ion-label>
         </ion-item>
+
         <ion-item class="balance">
-          <ion-label color="primary" stacked>Available Balance:</ion-label>
+          <ion-label color="primary" stacked><b>Available Balance:</b></ion-label>
           <ion-label>S$ 999,999.00</ion-label>
         </ion-item>
       </ion-row>

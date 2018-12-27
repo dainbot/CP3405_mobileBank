@@ -1,12 +1,24 @@
 page-account1 {
+  .firstName{
+    margin-top: 20px;
+    align-self: left;
+    text-align: left;
+  }
+
+  .lastName{
+    margin-top: 20px;
+    align-self: left;
+    text-align: left;
+  }
+
   .accNum{
-    margin-top: 80px;
+    margin-top: 20px;
     align-self: left;
     text-align: left;
   }
 
   .balance{
-    margin-top: 40px;
+    margin-top: 20px;
     align-self: left;
     text-align: left;
   }
