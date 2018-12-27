@@ -21,5 +21,15 @@ export class TransHistoryPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad TransHistoryPage');
   }
-
+  slides = [
+    {
+      image: "assets/imgs/bankcard.png",
+    },
+    {
+      image: "assets/imgs/bankcard.png",
+    },
+    {
+      image: "assets/imgs/bankcard.png",
+    }
+  ];
 }
