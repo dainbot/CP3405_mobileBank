@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {TransferPage} from "../transfer/transfer";
-import {AccountCreationPage} from "../account-creation/account-creation";
+import { AccountCreationPage} from "../account-creation/account-creation";
+import { AngularFireDatabase } from 'angularfire2/database';
+import { Accountprofile} from "../../models/accountprofile";
 
 /**
  * Generated class for the ConfirmCreationPage page.
@@ -17,7 +18,19 @@ import {AccountCreationPage} from "../account-creation/account-creation";
 })
 export class ConfirmCreationPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  items;
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              private afDatabase: AngularFireDatabase) {
+                this.getDataFromFireBase();
+  }
+
+  getDataFromFireBase(){
+    this.afDatabase.list('accountprofile').valueChanges().subscribe(
+      data => {
+        console.log(data)
+        this.items = data
+      }
+    )
   }
 
   ionViewDidLoad() {
