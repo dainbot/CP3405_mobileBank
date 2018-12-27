@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { AngularFireDatabase } from 'angularfire2/database'
 
 /**
  * Generated class for the TransHistoryPage page.
@@ -15,12 +16,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class TransHistoryPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  items;
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              private afDatabase: AngularFireDatabase) {
+                this.getDataFromFireBase()
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad TransHistoryPage');
-  }
   slides = [
     {
       image: "assets/imgs/bankcard.png",
@@ -32,4 +33,18 @@ export class TransHistoryPage {
       image: "assets/imgs/bankcard.png",
     }
   ];
+
+  getDataFromFireBase(){
+    this.afDatabase.list('History').valueChanges().subscribe(
+      data => {
+        console.log(data)
+        this.items = data
+      }
+    )
+    }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad TransHistoryPage');
+  }
+
 }
