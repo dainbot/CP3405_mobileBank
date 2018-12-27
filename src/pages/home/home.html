@@ -4,21 +4,37 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding class="home">
-    <h2>Welcome to Mobile Bank!</h2>
-    <p>
-      Enjoy the faster and more convenient way to bank on the go.
-    </p>
+<ion-content padding>
+  <h3 style="font-family: 'Chalkboard SE';" >Welcome to Mobile Bank!</h3>
+  <p style="font-size: 12px">
+    Enjoy the faster and more convenient way to bank on the go.
+  </p>
   <ion-grid>
-    <ion-row class="item">
+    <ion-row>
       <ion-col>
-        <ion-list>
-          <button ion-button (click)="openTransferPage()">Transfer</button>
-          <button ion-button (click)="openAccountInfoPage()">Account Information</button>
-          <button ion-button (click)="openTransHistoryPage()">History</button>
-          <button ion-button (click)="openAccountCreationPage()">Create Account</button>
-          <button ion-button (click)="openSettingsPage()">Settings</button>
+        <ion-list class="menu">
+          <ion-card>
+            <img src="assets/imgs/6.jpg" (click)="openTransferPage()">
+            <div class="card-title">Transfer</div>
+          </ion-card>
+          <ion-card>
+            <img src="assets/imgs/1.jpg" (click)="openAccountInfoPage()">
+            <div class="card-title">Account Information</div>
+          </ion-card>
+          <ion-card>
+            <img src="assets/imgs/7.jpg" (click)="openTransHistoryPage()">
+            <div class="card-title">History</div>
+          </ion-card>
+          <ion-card>
+            <img src="assets/imgs/2.jpg" (click)="openAccountCreationPage()">
+            <div class="card-title">Create Account</div>
+          </ion-card>
+          <ion-card>
+            <img src="assets/imgs/8.jpg" (click)="openSettingsPage()">
+            <div class="card-title">Settings</div>
+          </ion-card>
         </ion-list>
+
       </ion-col>
     </ion-row>
   </ion-grid>

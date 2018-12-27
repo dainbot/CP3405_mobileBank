@@ -1,3 +1,23 @@
 page-home {
 
+  .menu{
+    height: 20%;
+    width: 100%;
+  }
+  ion-card {
+    position: relative;
+    text-align: center;
+
+  }
+  .card-title {
+    position: absolute;
+    top: 45%;
+    font-size: 22px;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 0px #2c2e38, 2px 2px 0px #5c5f72;
+  }
+
+
 }
