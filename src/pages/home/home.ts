@@ -3,12 +3,10 @@ import { NavController } from 'ionic-angular';
 import { TransferPage } from '../transfer/transfer';
 
 import { TransHistoryPage } from '../trans-history/trans-history';
-
-
 import { SettingsPage } from '../settings/settings';
 import { CreateAccountPage } from '../create-account/create-account';
 import { AccountCreationPage } from '../account-creation/account-creation';
-
+import { AccountInfoPage} from "../account-info/account-info";
 
 @Component({
   selector: 'page-home',
@@ -29,7 +27,6 @@ export class HomePage {
     this.navCtrl.push(TransHistoryPage)
   }
 
-
   openSettingsPage(){
     this.navCtrl.push(SettingsPage)
   }
@@ -40,4 +37,7 @@ export class HomePage {
     this.navCtrl.push(AccountCreationPage)
   }
 
+  openAccountInfoPage(){
+    this.navCtrl.push(AccountInfoPage)
+  }
 }
