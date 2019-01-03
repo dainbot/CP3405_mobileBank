@@ -12,10 +12,9 @@
 <ion-content padding>
   <ion-grid>
     <ion-list>
-        <ion-item class="detailbox" *ngFor="let item of items">
-          <h2><b>Transaction details</b></h2>
-          <h3>Amount: ${{item.amount}}</h3>
-          <h3></h3>
+        <ion-item *ngFor="let item of items">
+          <h2><b>Transaction details</b></h2><br>
+          <h3 style="text-align: left">Amount: ${{item.amount}}</h3>
         </ion-item>
     </ion-list>
       <button ion-button class="button1" (click)="openTransferPage()">Make Another Transfer</button>
