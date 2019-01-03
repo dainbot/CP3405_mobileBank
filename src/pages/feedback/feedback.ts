@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ConfirmFeedbackPage} from "../confirm-feedback/confirm-feedback";
+import { Feedback } from "../../models/feedback";
+import { AngularFireDatabase } from 'angularfire2/database';
 
 /**
  * Generated class for the FeedbackPage page.
@@ -16,13 +18,17 @@ import { ConfirmFeedbackPage} from "../confirm-feedback/confirm-feedback";
 })
 export class FeedbackPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  feedback = {} as Feedback
+
+  constructor(private afDatabase: AngularFireDatabase,
+    public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad FeedbackPage');
   }
   openConfirmFeedbackPage(){
-    this.navCtrl.push(ConfirmFeedbackPage)
+      this.afDatabase.list('Feedback').push(this.feedback)
+        .then(() =>this.navCtrl.push(ConfirmFeedbackPage))
   }
 }
