@@ -14,18 +14,18 @@
 
 
 <ion-content padding>
-
+<!-- set a text box for customers to wirte their feedback -->
   <ion-list>
       <ion-label class="feedback" color="primary" stacked style="font-size: 15px; font-weight: bold; margin-bottom: 3%">
         Your Feedback or Suggestion:
       </ion-label>
-      <!-- Store user's input into database -->
       <ion-input class="input" type="text" [(ngModel)]="feedback.feedbackmsg"></ion-input>
 
+<!--  set a from for customers to leave their contact detail, and we can contact them to help them to solve issues -->
     <ion-label class="feedback" color="primary" stacked style="font-size: 15px; font-weight: bold; margin-bottom: 3%">
       Contact:
     </ion-label>
-    <!-- Store user's input into database according to each attributes -->
+    
     <ion-input class="input1" placeholder="Name" type="text" style="text-align: left"
                type="text" [(ngModel)]="feedback.name"></ion-input>
     <ion-input class="input1" placeholder="Phone" type="text" style="padding-left: 5%"
@@ -33,5 +33,6 @@
     <ion-input class="input1" placeholder="Email" type="text" style="padding-left: 5%"
                type="text" [(ngModel)]="feedback.email"></ion-input>
   </ion-list>
+<!--   set the button for customers confirm their feedback -->
   <button ion-button round class="confirm" (click)="openConfirmFeedbackPage()">Confirm</button>
 </ion-content>
