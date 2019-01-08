@@ -18,6 +18,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 })
 export class TransactionPage {
 
+  //   Store user's inputs into amount file
   amount = {} as amount;
 
   constructor(private afDatabase: AngularFireDatabase,
@@ -28,6 +29,7 @@ export class TransactionPage {
     console.log('ionViewDidLoad TransactionPage');
   }
 
+  //   Push this page and open confirmation page
   openConfirmTransPage(){
     this.afDatabase.list('amount').push(this.amount)
       .then(() => this.navCtrl.push(ConfirmTransPage))
