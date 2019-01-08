@@ -37,11 +37,11 @@
     <ion-row>
       <ion-item class="amount">
         <ion-label color="primary" stacked>Amount</ion-label>
-        <ion-input type="text" [(ngModel)]="amount.amount"></ion-input>
+        <ion-input type="text" [(ngModel)]="amount.amount" placeholder="$"></ion-input>
       </ion-item>
       <ion-item class="date">
         <ion-label color="primary" stacked>When</ion-label>
-        <ion-input type="date" placeholder="date"></ion-input>
+        <ion-input type="date" [(ngModel)]="amount.when" placeholder="Immediate"></ion-input>
       </ion-item>
     </ion-row>
     <button ion-button round class="confirm" (click)="openConfirmTransPage()">Confirm</button>

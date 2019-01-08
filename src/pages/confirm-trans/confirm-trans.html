@@ -15,6 +15,7 @@
         <ion-item *ngFor="let item of items">
           <h2><b>Transaction details</b></h2><br>
           <h3 style="text-align: left">Amount: ${{item.amount}}</h3>
+          <h3 style="text-align: left">When: {{item.when}}</h3>
         </ion-item>
     </ion-list>
       <button ion-button class="button1" (click)="openTransferPage()">Make Another Transfer</button>
