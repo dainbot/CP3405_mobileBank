@@ -34,6 +34,7 @@ export class TransHistoryPage {
     }
   ];
 
+//   Get sample data froom database
   getDataFromFireBase(){
     this.afDatabase.list('History').valueChanges().subscribe(
       data => {
