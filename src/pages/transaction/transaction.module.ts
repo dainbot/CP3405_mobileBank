@@ -8,7 +8,7 @@ import { TransactionPage } from './transaction';
     TransactionPage,
   ],
   imports: [
-      //     imports the IonicPageModule to NgModule
+  //     imports the IonicPageModule to NgModule
     IonicPageModule.forChild(TransactionPage),
   ],
 })
