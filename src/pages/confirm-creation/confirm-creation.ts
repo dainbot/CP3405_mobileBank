@@ -24,6 +24,7 @@ export class ConfirmCreationPage {
   }
 
   getDataFromFireBase(){
+//     get account creation data from firebase
     this.afDatabase.list('accountprofile').valueChanges().subscribe(
       data => {
         console.log(data)
