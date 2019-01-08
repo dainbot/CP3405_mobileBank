@@ -10,6 +10,7 @@
 
 
 <ion-content padding>
+<!--   show the detail which the customer submit, including customer name, giving a new account number, account type. -->
   <ion-grid>
     <ion-list>
       <ion-item *ngFor="let item of items">
@@ -19,6 +20,7 @@
         <h3 style="text-align: left">Account Type: savings</h3>
       </ion-item>
     </ion-list>
+<!--     set two buttons, one for return the account creation page, the other for share the account detail to other. -->
     <button ion-button class="button1" (click)="openAccountCreationPage()">Make Another Creation</button>
     <button ion-button class="button1">Share Details</button>
   </ion-grid>
