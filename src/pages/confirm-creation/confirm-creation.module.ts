@@ -8,7 +8,7 @@ import { ConfirmCreationPage } from './confirm-creation';
     ConfirmCreationPage,
   ],
   imports: [
-    //     imports the module to NgModule
+    //     imports the IonicPageModule to NgModule
     IonicPageModule.forChild(ConfirmCreationPage),
   ],
 })
