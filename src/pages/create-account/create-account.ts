@@ -34,6 +34,9 @@ export class CreateAccountPage {
         .then(() => this.navCtrl.push(ConfirmCreationPage))
   }
 
+    /**
+  * Button event, when user click the event, it will go to Home page
+  */
   openHomePage(){
     this.navCtrl.push(HomePage)
   }
