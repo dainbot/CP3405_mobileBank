@@ -31,6 +31,9 @@ export class Account1Page {
     )
   }
 
+    /**
+  * Button event, when user click the event, it will go to Account1 page
+  */
   ionViewDidLoad() {
     console.log('ionViewDidLoad Account1Page');
   }
