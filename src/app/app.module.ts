@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { TransferPage } from '../pages/transfer/transfer';
@@ -31,7 +30,6 @@ import { AngularFireDatabaseModule } from "angularfire2/database";
 @NgModule({
   declarations: [
     MyApp,
-    ContactPage,
     HomePage,
     TabsPage,
     TransferPage,
@@ -60,7 +58,6 @@ import { AngularFireDatabaseModule } from "angularfire2/database";
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    ContactPage,
     HomePage,
     TabsPage,
     TransferPage,
