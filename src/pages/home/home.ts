@@ -18,25 +18,44 @@ export class HomePage {
 
   }
 
+    /**
+  * Button event, when user click the transfer event, it will go to Transfer page
+  */
   openTransferPage(){
     this.navCtrl.push(TransferPage)
   }
 
-
+    /**
+  * Button event, when user click the transaction history event, it will go to TransactionHistory page
+  */
   openTransHistoryPage(){
     this.navCtrl.push(TransHistoryPage)
   }
 
+     /**
+  * Button event, when user click the setting event, it will go to Setting page
+  */
   openSettingsPage(){
     this.navCtrl.push(SettingsPage)
   }
+  
+       /**
+  * Button event, when user click the CreateAccount event, it will go to CreateAccount page
+  */
   openCreateAccountPage(){
     this.navCtrl.push(CreateAccountPage)
   }
+  
+         /**
+  * Button event, when user click the AccountCreate event, it will go to AccountCreate page
+  */
   openAccountCreationPage(){
     this.navCtrl.push(AccountCreationPage)
   }
 
+         /**
+  * Button event, when user click the AccountInfo event, it will go to AccountInfo page
+  */
   openAccountInfoPage(){
     this.navCtrl.push(AccountInfoPage)
   }
