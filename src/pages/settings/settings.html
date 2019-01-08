@@ -16,7 +16,7 @@
   <ion-list-header class="list-header">
     General
   </ion-list-header>
-
+<!-- select the language for app -->
   <ion-item>
     <ion-icon name='planet' item-start></ion-icon>
     <ion-label class="text">Language</ion-label>
@@ -28,7 +28,6 @@
     </ion-select>
   </ion-item>
 
-
   <ion-item>
     <ion-icon name="videocam" item-start></ion-icon>
     <ion-label class="text">
@@ -36,6 +35,7 @@
     </ion-label>
   </ion-item>
 
+<!--   choose the font size for app -->
   <ion-item>
     <ion-icon name="brush" item-start></ion-icon>
     <ion-range min="-100" step="10" snaps="true" [(ngModel)]="text" item-end>
@@ -44,6 +44,7 @@
     </ion-range>
   </ion-item>
 
+<!--   set the notification for app -->
   <ion-item>
     <ion-icon name='notifications' item-start></ion-icon>
     <ion-label class="text">
@@ -52,6 +53,7 @@
     <ion-toggle checked="false" item-end></ion-toggle>
   </ion-item>
 
+<!--   set the button for customers to give feedback -->
   <ion-item>
     <ion-icon name="chatbubbles" item-start></ion-icon>
     <ion-label class="text" (click)="openFeedbackPage()">Feedback</ion-label>
