@@ -39,7 +39,7 @@ export class AccountCreationPage {
     }
   ];
   /**
-  * Button event, when user clikc the event, it will go to CreatAccount page
+  * Button event, when user click the event, it will go to CreatAccount page
   */
   openCreateAccountPage(){
     this.navCtrl.push(CreateAccountPage)
