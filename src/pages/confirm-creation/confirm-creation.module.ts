@@ -4,9 +4,11 @@ import { ConfirmCreationPage } from './confirm-creation';
 
 @NgModule({
   declarations: [
+    //     declare the components belong to NgModule
     ConfirmCreationPage,
   ],
   imports: [
+    //     imports the module to NgModule
     IonicPageModule.forChild(ConfirmCreationPage),
   ],
 })
