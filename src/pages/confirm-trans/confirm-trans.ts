@@ -34,6 +34,9 @@ export class ConfirmTransPage {
     )
   }
 
+    /**
+  * Button event, when user click the event, it will go to Transfer page
+  */
   openTransferPage(){
     this.navCtrl.push(TransferPage)
   }
