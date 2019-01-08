@@ -18,6 +18,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 })
 export class FeedbackPage {
 
+//   Store any inputs into the Feedback file
   feedback = {} as Feedback
 
   constructor(private afDatabase: AngularFireDatabase,
@@ -27,6 +28,8 @@ export class FeedbackPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad FeedbackPage');
   }
+  
+//   Push this page and opent Confirmation page
   openConfirmFeedbackPage(){
       this.afDatabase.list('Feedback').push(this.feedback)
         .then(() =>this.navCtrl.push(ConfirmFeedbackPage))
