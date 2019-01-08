@@ -12,7 +12,8 @@
 
 </ion-header>
 
-<ion-content padding>
+<ion-content padding> 
+<!--   Create a from for customer to write their information -->
   <ion-row>
     <ion-item class="firstName">
       <ion-input type="text" placeholder="First Name" [(ngModel)]="accountprofile.firstname"></ion-input>
@@ -29,7 +30,9 @@
     <ion-item class="address">
       <ion-input type="text" placeholder="Address" [(ngModel)]="accountprofile.address"></ion-input>
     </ion-item>
+    
       <ion-item>
+<!-- select the occpation in this buttom -->
         <ion-label class="occupation">Occupation</ion-label>
         <ion-select [(ngModel)]="Occupation">
           <ion-option value="Student">Student</ion-option>
@@ -39,6 +42,7 @@
       </ion-item>
 
 </ion-row>
+<!--   click this button can open home page and confirm page -->
   <button ion-button round class="back" (click)="openHomePage()">Back</button>
   <button ion-button round class="form-confirm" (click)="openConfirmCreationPage()">Confirm</button>
 </ion-content>
