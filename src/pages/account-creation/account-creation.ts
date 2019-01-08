@@ -21,6 +21,9 @@ export class AccountCreationPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad AccountCreationPage');
   }
+  /**
+  *Create the slides event with title and image, define the img location.
+  */
   slides = [
     {
       title: "Account type:",
@@ -35,6 +38,9 @@ export class AccountCreationPage {
       image: "assets/imgs/bankcard.png",
     }
   ];
+  /**
+  * Button event, when user clikc the event, it will go to CreatAccount page
+  */
   openCreateAccountPage(){
     this.navCtrl.push(CreateAccountPage)
   }
