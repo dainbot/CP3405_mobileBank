@@ -8,7 +8,7 @@ import { ConfirmTransPage } from './confirm-trans';
     ConfirmTransPage,
   ],
   imports: [
-    //     imports the module to NgModule
+    //     imports the IonicPageModule to NgModule
     IonicPageModule.forChild(ConfirmTransPage),
   ],
 })
