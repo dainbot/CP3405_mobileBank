@@ -36,6 +36,10 @@ export class ConfirmCreationPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ConfirmCreationPage');
   }
+  
+    /**
+  * Button event, when user click the event, it will go to AccountCreation page
+  */
   openAccountCreationPage(){
     this.navCtrl.push(AccountCreationPage)
   }
