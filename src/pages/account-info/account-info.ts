@@ -26,6 +26,10 @@ export class AccountInfoPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad AccountInfoPage');
   }
+  
+    /**
+  * Button event, when user click the event, it will go to Account1/Account2/Account3 page
+  */
   openAccount1Page(){
   this.navCtrl.push(Account1Page)
   }
