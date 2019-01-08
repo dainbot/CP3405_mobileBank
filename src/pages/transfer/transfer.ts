@@ -3,10 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TransactionPage } from '../transaction/transaction';
 
 /**
- * Generated class for the TransferPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
+ * This ts file is for transfer page to call and store functions
  */
 
 @IonicPage()
@@ -22,7 +19,9 @@ export class TransferPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad TransferPage');
   }
-
+/**
+ * When user click the button, this is the event where should user go
+ */
   openTransactionPage(){
     this.navCtrl.push(TransactionPage)
   }
