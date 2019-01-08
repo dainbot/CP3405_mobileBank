@@ -4,9 +4,11 @@ import { ConfirmTransPage } from './confirm-trans';
 
 @NgModule({
   declarations: [
+//     declare the components belong to NgModule
     ConfirmTransPage,
   ],
   imports: [
+    //     imports the module to NgModule
     IonicPageModule.forChild(ConfirmTransPage),
   ],
 })
